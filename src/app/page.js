@@ -1,9 +1,8 @@
 export default function Home() {
   return (
-    <>
-    <h2>Welcome</h2>
-    Hello, WEB
-    <p><img src="/hello.png" width="80" alt="" /></p>
-    </>
-  )
+    <div style={{ border: "1px solid black" }}>
+      <h2>app/page (server component)</h2>
+      {new Date().getTime()}
+    </div>
+  );
 }
