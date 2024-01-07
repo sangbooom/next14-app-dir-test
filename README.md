@@ -21,5 +21,6 @@
 Next.js 앱 라우터는 페이지 간 "Soft Navigation"을 활성화하여 변경된 경로 세그먼트만 다시 렌더링(부분 렌더링)하도록 한다. 이를 통해 탐색 중에 클라이언트 React 상태를 유지할 수 있다.
 
 ### router.refresh()는 update 이후 캐시된 데이터를 invalidate하고 다시 불러오는데 효과적이다.(revalidateTag 처럼 쓰임) 그리고 SSR에서만 의미가 있다.
-페이지가 SSR일떈 데이터 update(`POST /topic`) 하고 router.refresh()하면 서버컴포넌트에서 받아온 GET(`/topic`)데이터도 갱신된다. 그리고 router.refresh() 없어도 새로고침하면 (`GET /topic`) 데이터를 다시 받아온다.
+페이지가 SSR일떈 데이터 update(`POST /topic`) 하고 router.refresh()하면 서버컴포넌트에서 받아온 GET(`/topic`)데이터도 갱신된다. 그리고 router.refresh() 없어도 새로고침하면 (`GET /topic`) 데이터를 다시 받아온다.   
+
 페이지가 SSG일땐 데이터 update(`POST /topic`) 하고 router.refresh()하면 그 페이지 RSC payload만 무효화하고 변경된 부분만 다시 렌더링한다. 하지만, 다른 페이지로 라우팅하면 update 이전 데이터가 보여진다. router.refresh()는 SSG에선 의미 없다.
