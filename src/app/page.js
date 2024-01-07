@@ -1,3 +1,4 @@
+// SSG
 export default function Home() {
   return (
     <div style={{ border: "1px solid black" }}>

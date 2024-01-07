@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 
 export default function Create() {
   const router = useRouter();
-  
+
   return (
     <div style={{ border: "1px solid black" }}>
       <h2>app/create/page (client component)</h2>
@@ -22,9 +22,11 @@ export default function Create() {
             body: JSON.stringify({ title, body }),
           });
           const topic = await resp.json();
-          console.log("file: page.js:19 ~ Create ~ topic:", topic);
+          // console.log("file: page.js:19 ~ Create ~ topic:", topic);
           router.push(`/read/${topic.id}`);
-          router.refresh();
+          // setTimeout(() => {
+          //   router.refresh();
+          // }, 1000);
         }}
       >
         <h2>Create</h2>

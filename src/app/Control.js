@@ -7,17 +7,21 @@ export function Control() {
   const params = useParams();
   const id = params.id;
   return (
-    <div style={{ border: "1px solid black" }}>
+    <div style={{ marginTop: '40px', border: "2px solid blue" }}>
       <h2>app/Control (client component)</h2>
       {new Date().getTime()}
       <ul>
         <li>
-          <Link href="/create">create</Link>
+          <Link prefetch={false} href="/create">
+            create
+          </Link>
         </li>
         {id ? (
           <>
             <li>
-              <Link href={`/update/${id}`}>update</Link>
+              <Link prefetch={false} href={`/update/${id}`}>
+                update
+              </Link>
             </li>
             <li>
               <button
@@ -27,7 +31,7 @@ export function Control() {
                   });
                   await resp.json();
                   router.push("/");
-                  router.refresh();
+                  // router.refresh();
                 }}
               >
                 delete

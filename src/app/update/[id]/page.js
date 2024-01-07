@@ -2,12 +2,13 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-export default function Update(props) {
+// dynamic function 썼으니까 동적 렌더링
+export default function Update({ params }) {
   const router = useRouter();
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
-  const id = props.params.id;
-  
+  const id = params.id;
+
   async function refresh() {
     const resp = await fetch(`${process.env.NEXT_PUBLIC_API_URL}topics/${id}`);
     const topic = await resp.json();
@@ -37,7 +38,7 @@ export default function Update(props) {
           });
           const topic = await resp.json();
           router.push(`/read/${topic.id}`);
-          router.refresh();
+          // router.refresh();
         }}
       >
         <h2>Update</h2>
