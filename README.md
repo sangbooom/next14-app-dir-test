@@ -8,7 +8,7 @@
 ### RSC payload에는 fetch 결과가 입혀져 완성된 html이 다 담긴 채 저장되어 있다.
 ![스크린샷 2024-01-06 오후 11 21 29](https://github.com/sangbooom/next14-app-dir-test/assets/43921054/4fd9ea0f-bae9-4540-8d33-0b868e9ed717)
 
-### 클라이언트 컴포넌트도 서버 컴포넌트에 담긴채 렌더링 된 후에 hydrate 된다
+### 클라이언트 컴포넌트는 서버 컴포넌트에 ref로 담긴다. (ref에는 해당 청크파일을 물고 있음) 아직 코드를 불러오지 않았기 때문에 SSR과 달리 hydrate가 없다.
 > [참고](https://velog.io/@gustjq4146/Next.js%EC%9D%98-%EB%A0%8C%EB%8D%94%EB%A7%81%EC%97%90-%EA%B4%80%ED%95%98%EC%97%AC#%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EB%A0%8C%EB%8D%94%EB%A7%81-%EB%90%A0%EA%B9%8C)
 
 ![스크린샷 2024-01-07 오전 1 14 32](https://github.com/sangbooom/next14-app-dir-test/assets/43921054/ed428ab2-e80e-4608-83f8-3b2e69fa29f7)
