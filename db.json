@@ -20,22 +20,29 @@
     {
       "id": 1,
       "title": "posts1",
-      "author": "typicode"
+      "author": "sangbooom"
     },
     {
       "id": 2,
       "title": "posts2",
-      "author": "typicode"
+      "author": "sangbooom"
     }
   ],
   "comments": [
     {
       "id": 1,
-      "body": "some comment",
+      "title": "comment1",
+      "body": "comment1",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "title": "comment2",
+      "body": "comment2",
       "postId": 1
     }
   ],
   "profile": {
-    "name": "typicode"
+    "name": "sangbooom"
   }
 }
